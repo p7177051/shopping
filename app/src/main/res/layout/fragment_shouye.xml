@@ -2,18 +2,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     >
-    <TextView
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/shouye_mrefresh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="御泥坊vip商城"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="@color/colorAccent"/>
-<xlistview.bawei.com.xlistviewlibrary.XListView
-    android:id="@+id/shouye_xlistview"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    />
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="御泥坊vip商城"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorAccent"/>
+                <com.youth.banner.Banner
+                    android:id="@+id/shouye_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+                <GridView
+                    android:id="@+id/shouye_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"></GridView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="本周热销"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/shouye_hrecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="热门专题"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/shouye_moreitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
 
 </LinearLayout>
